@@ -23,6 +23,11 @@ jobs:
         pip install -r requirements.txt
     - name: Test with flake8 and django tests
       run: |
-        # запуск проверки проекта по flake8
+        # start a project check on flake8
         python -m flake8
+        # go to the folder containing manage.py -
+        # <root_project_folder>/<project_folder>/manage.py
+        cd infra_project/
+        # run tests written by the dev
+        python manage.py test
       
